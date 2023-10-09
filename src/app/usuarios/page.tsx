@@ -1,7 +1,10 @@
 async function obtenerUsuarios() {
-  const respuesta = await fetch("http://localhost:3000/api/usuarios", {
-    cache: "no-store",
-  });
+  const respuesta = await fetch(
+    "https://blog-de-roberto.vercel.app/api/usuarios",
+    {
+      cache: "no-store",
+    }
+  );
   const datos = await respuesta.json();
   return datos;
 }

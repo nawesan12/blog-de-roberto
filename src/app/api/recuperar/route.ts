@@ -32,7 +32,7 @@ export async function POST(req: Request) {
     asunto: "Recupera tu contraseña",
     from_name: "Blog de Roberto",
     to_name: usuario.nombre,
-    link: `http://localhost:3000/auth/recuperar/${tokenUnicoParaRecuperacion}`,
+    link: `https://blog-de-roberto.vercel.app/auth/recuperar/${tokenUnicoParaRecuperacion}`,
     user_email: datos.email,
   };
 

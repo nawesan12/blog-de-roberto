@@ -31,7 +31,7 @@ export default function FormularioDeRegistro() {
     console.log(datosAEnviar);
 
     const respuesta = await fetch(
-      "http://localhost:3000/api/usuarios/register",
+      "https://blog-de-roberto.vercel.app/api/usuarios/register",
       {
         method: "POST",
         headers: {

@@ -8,14 +8,17 @@ export default function Page() {
 
   async function recuperarContrasenia(evento: FormEvent) {
     evento.preventDefault();
-    const respuesta = await fetch("http://localhost:3000/api/recuperar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      //@ts-ignore
-      body: JSON.stringify({ email: emailRef.current?.value }),
-    });
+    const respuesta = await fetch(
+      "https://blog-de-roberto.vercel.app/api/recuperar",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        //@ts-ignore
+        body: JSON.stringify({ email: emailRef.current?.value }),
+      }
+    );
 
     if (respuesta.status !== 200) {
       alert("El email no existe");
