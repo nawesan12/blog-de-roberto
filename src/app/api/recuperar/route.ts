@@ -6,7 +6,6 @@
 // en base a ese email va a poder acceder al cambi ode contrase;a
 import { PrismaClient } from "@prisma/client";
 import { sign } from "jsonwebtoken";
-import { send } from "@emailjs/browser";
 
 const prisma = new PrismaClient();
 
